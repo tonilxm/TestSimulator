@@ -1,0 +1,18 @@
+{% extends "base.html" %}
+
+{% block content %}
+    <fieldset>
+        <legend>Test Simulator</legend>
+        <h2>Welcome {{ profile.name }} to dJF Simulator</h2>
+        <p>Lorem ipsum dolor sit amet, consectetuer adipiscing elit. Nam cursus. Morbi ut mi.
+Nullam enim leo, egestas id, condimentum at, laoreet mattis, massa. Sed eleifend nonummy diam.
+Praesent mauris ante, elementum et, bibendum at, posuere sit amet, nibh. Duis tincidunt lectus quis dui
+viverra vestibulum. Suspendisse vulputate aliquam dui. Nulla elementum dui ut augue. Aliquam vehicula.
+        </p>
+        <p>
+            <a class="btn btn-primary btn-large" href="{{ url_for('user_agreement') }}">
+                Next
+            </a>
+        </p>
+    </fieldset>
+{% endblock content %}

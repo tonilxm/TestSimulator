@@ -1,0 +1,11 @@
+{% extends "base.html" %}
+
+{% block content %}
+    <fieldset>
+        <legend>Email verification required</legend>
+        <div>
+        Email has been sent to {{ email }}. Please verify your registration and login again
+        to take the test.
+        </div>
+    </fieldset>
+{% endblock content %}

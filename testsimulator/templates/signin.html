@@ -1,0 +1,35 @@
+{% extends "base.html" %}
+
+{% block content %}
+    {% from "_formhelpers.html" import render_field %}
+    <form id="signin-form" class="well form-horizontal"
+            action="{{ url_for('signin') }}" method=post
+            enctype="multipart/form-data" accept-charset="utf-8">
+        <fieldset>
+            <legend>Sign in</legend>
+            {{ render_field(form.name) }}
+            {{ render_field(form.email) }}
+            {{ render_field(form.address) }}
+            {{ render_field(form.phone) }}
+            {{ render_field(form.password) }}
+            <div class="control-group">
+                <div class="control-label">Resume</div>
+                <div class="controls">
+                    <input type=file name="resume" placeholder="Upload you resume">
+                </div>
+            </div>
+            <div class="control-group">
+                <div class="control-label">Photo</div>
+                <div class="controls">
+                    <input type=file name="photo" placeholder="Upload you photo">
+                </div>
+            </div>
+            <div class="control-group">
+                <div class="controls">
+                    <input class="btn btn-primary" type="submit" value="Sign in"/>
+                    <a class="btn cancel" href="{{ url_for('index') }}">Cancel</a>
+                </div>
+            </div>
+        </fieldset>
+    </form>
+{% endblock content %}

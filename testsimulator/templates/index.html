@@ -1,0 +1,28 @@
+{% extends "base.html" %}
+
+{% block content %}
+    <div class="hero-unit">
+        <h1>Test Simulator</h1>
+        <p>
+            <pre>Lorem ipsum dolor sit amet, consectetuer adipiscing elit. Nam cursus. Morbi ut mi.
+Nullam enim leo, egestas id, condimentum at, laoreet mattis, massa. Sed eleifend nonummy diam.
+Praesent mauris ante, elementum et, bibendum at, posuere sit amet, nibh. Duis tincidunt lectus quis dui
+viverra vestibulum. Suspendisse vulputate aliquam dui. Nulla elementum dui ut augue. Aliquam vehicula.
+            </pre>
+
+        </p>
+        <p>
+            <a class="btn btn-primary btn-large">
+                Learn about us!
+            </a>
+        </p>
+    </div>
+    <p>
+        <a class="btn" href="{{ url_for('login') }}">
+            Login
+        </a>
+        <a class="btn" href="{{ url_for('signin') }}">
+            Sign in
+        </a>
+    </p>
+{% endblock content %}
